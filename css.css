@@ -1,0 +1,209 @@
+body
+{
+	margin: 0px;
+	background: #A9A9A9;
+}
+footer
+{
+	background: #A9A9A9;
+	height: 100px;
+}
+nav 
+{
+	background-color: #696969;
+	height: 55px;
+}
+
+nav ul
+{
+	background-color: #696969;
+}
+
+a 
+{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+a::after
+{
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: white;
+	transition: width .7s;
+    clear: both;
+}
+
+a:hover::after
+{
+	width: 100%;
+}
+
+
+li
+{
+	display: inline-block;
+	font-size: 25px;
+	position: relative;
+	text-align: center;
+}
+
+nav ul li a:hover{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+li ul{
+    display:none;
+    position: absolute;
+    min-width: 150px;
+    
+}
+
+li > ul li a
+{
+   padding: 10px;
+   font-size: 15px;
+}
+
+li > ul li a:hover
+{
+   font-size: 15px;
+}
+
+ li:hover >ul{
+    display: block;
+}
+
+
+
+div
+{
+	font-family: Avantgarde, sans-serif;
+}
+
+header
+{
+	font-size: 25px;
+}
+
+h2
+{
+	color: white;
+}
+ 
+
+
+.ot
+{
+	margin-left: 500px;
+	margin-bottom:30px;
+}
+
+.ots
+{
+	margin-left: 0px;
+}
+
+.ot1
+{
+	margin-left: 300px;
+}
+
+.picture
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	max-width : 1140px;
+	margin: 0 auto;
+	padding: 100px;
+    top:auto;
+}
+
+
+#app {
+  display: flex;
+  height: 100%;
+}
+
+.album {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+  width: 70%;
+  max-width: 1200px;
+}
+
+.album-item {
+  flex: 1 1 20%;
+}
+
+.album-item img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.img_popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  cursor: pointer;
+}
+
+.img_popup .content {
+  margin: auto;
+  width: 85%;
+  height: max-content;
+  max-width: 1200px;
+  display: flex;
+  cursor: default;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img_popup .content img {
+  width: 70%;
+}
+
+.img_popup .content .text {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+button {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  font-size: 100px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}

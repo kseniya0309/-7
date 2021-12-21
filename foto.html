@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Лр1 </title>
+<meta charset = "utf-8">
+<link rel = "stylesheet" type = "text/css" href="css.css">
+<link rel = "stylesheet" type = "text/css" href="data.css">
+    <script src="html://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+	<script src="html://unpkg.com/vue@next"></script>
+<script src="foooott.js"></script>
+<div>
+<header>
+<h1 align="center"> Сайт Качановой Ксении </h1>
+</header>
+<nav>
+<ul class = "ots">
+<li class="current-date" style="font-size: 15px;"><span class="day"></span>.<span class="month"></span>.<span class="year"></span> <span class="day-of-week"></span></li>
+<li class="current-time" style="font-size: 15px;"><span class="hours"></span>:<span class="minutes"></span>:<span class="seconds"></span></li>    
+<li><a href="#"> Главная </a></li>
+<li><a href="#l"> Обо мне </a></li>
+    
+<li><a href="#"> Мои интересы </a>
+    <ul>
+        <li><a href="#"> Сериалы </a></li>
+        <li><a href="#"> Водить машину </a></li>
+        <li><a href="#"> Ждать парня из армии </a></li>
+    </ul>
+    </li>
+<li><a href="#"> Фотоальбом </a></li>
+<li><a href="#"> Учеба </a></li>
+<li><a href="#"> Контакты </a></li>
+<li><a href="#"> История </a></li>
+</ul>
+</nav>
+</div>
+
+    <div id="app">
+    <div class="album">
+    <album-item v-for="(photo,i) in photos" :key="i" :package="photo" @click="index = i"></album-item>
+  </div>
+		<img-popup v-if="index !== -1" :photos="photos" :index="index" @close="index=-1">
+  </img-popup>
+    </div>
+
+
+
+<script src="data.js"></script>
+
+<script src="history_photo.js"></script>
+</body>
+
+<footer> 
+</footer>
+
+</html>
